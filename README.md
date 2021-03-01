@@ -1,5 +1,7 @@
 # Santa Paravia and Fiumaccio (SantaParavia.com)
-This is PHP play by email version of Santa Paravia and Fiumaccio by Rev. George Blank
+This is a PHP play by email version of Santa Paravia and Fiumaccio by Rev. George Blank.  In this version there are some differences from the original.
+
+Rather than being a direct port from the original game, I have updated it based on a case study provided by Rev. Blank in 2000 which updated the game to a more modern take on the game.  You may notice a few differences unless you've never played the game.  One major difference in this version is that all six players can take their turn simultaneously rather than having to wait for the previous player like in the original game.  Once all six players have completed their turns for the current year, the annual calculations occur and all players are emailed that they can take their turn again.  The other changes have more to do with calculations and I won't be going through all those changes.  Suffice it to say, this should be a fun version to play for those who love Santa Paravia and Fiumaccio.
 
 ## _From the original release in the December 1978 edition of Softside software magazine:_
 
