@@ -1,0 +1,207 @@
+::selection {
+    color: none;
+    background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    color: none;
+    background: none;
+}
+@font-face {
+    font-family: AquilineTwo;
+    src: url("/fonts/AquilineTwo.ttf");
+}
+body {
+    background-image: url("../img/ItalianCountryside4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.main {
+    /* background-image: url("../img/ItalianCountryside4.png"); */
+    object-fit: cover;
+    /* opacity: 0.5; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    z-index: -1;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+.main2 {
+    /* background-image: url("../img/ItalianCountryside4.png"); */
+    object-fit: cover;
+    /* opacity: 0.5; */
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+.div-bg {
+    background-color: rgba(242,242,242,.8);
+    border-radius: 25px;
+    width: 500px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#lh {
+    font-family:
+            AquilineTwo,
+            "Palatino Linotype",	/* Windows */
+            "URW Palladio L",		/* Unix+FontConfig (ugly!) */
+            "palladio l",		/* Unix+X+FreeType */
+            palatino,			/* MacOS */
+            "book antiqua",		/* Win95 */
+                /* Fallback options */
+            times,			/* Unix+X, MacOS */
+            serif;
+    /* "Goudy Old Style" is vaguely like Palatino. */
+    line-height: 120%;
+    color: black;
+    font-size: 300%;
+    font-weight: bolder;
+    width: 80%;
+    text-align: center;
+}
+
+#lp {
+    font-family:
+            AquilineTwo,
+            "Palatino Linotype",	/* Windows */
+            "URW Palladio L",		/* Unix+FontConfig (ugly!) */
+            "palladio l",		/* Unix+X+FreeType */
+            palatino,			/* MacOS */
+            "book antiqua",		/* Win95 */
+                /* Fallback options */
+            times,			/* Unix+X, MacOS */
+            serif;
+    /* "Goudy Old Style" is vaguely like Palatino. */
+    line-height: 120%;
+    color: black;
+    font-size: 250%;
+    width: 80%;
+    text-align: center;
+}
+#lb {
+    font-family:
+            /* AquilineTwo,*/
+            Vivaldi,
+            "Palatino Linotype",	/* Windows */
+            "URW Palladio L",		/* Unix+FontConfig (ugly!) */
+            "palladio l",		/* Unix+X+FreeType */
+            palatino,			/* MacOS */
+            "book antiqua",		/* Win95 */
+                /* Fallback options */
+            times,			/* Unix+X, MacOS */
+            serif;
+    /* "Goudy Old Style" is vaguely like Palatino. */
+    line-height: 120%;
+    color: black;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    overflow: hidden;
+}
+p {
+    line-height: 120%;
+    color: aliceblue;
+    text-align: center;
+}
+path {
+    fill: transparent;
+}
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Height of footer */
+    /* padding: 1rem; */
+    background-color: #efefef;
+    text-align: center;
+}
+.myButton {
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+    background-color:#c62d1f;
+    border-radius:18px;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:25px;
+    padding:7px 25px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+    font-family:
+            /* AquilineTwo, */
+            Vivaldi,
+            "Palatino Linotype",	/* Windows */
+            "URW Palladio L",		/* Unix+FontConfig (ugly!) */
+            "palladio l",		/* Unix+X+FreeType */
+            palatino,			/* MacOS */
+            "book antiqua",		/* Win95 */
+                /* Fallback options */
+            times,			/* Unix+X, MacOS */
+            serif;
+    /* "Goudy Old Style" is vaguely like Palatino. */
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+    background-color:#f24437;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+.error {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}

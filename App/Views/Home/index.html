@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<div class="main container">
+    <br>
+    <img src="img/SantaParaviaBanner.png" alt="Santa Paravia and Fiumaccio" style="width: 743px;">
+    <!-- <a id="lh">Santa Paravia and Fiumaccio</a> -->
+    <br>
+    <a id="lp">Welcome to SantaParavia.com!</a>
+    <br><br>
+    <div style="display: inline-block;align-self: center;width: 80vw;overflow: hidden;">
+    <span id="lb">
+        In this online game, you are the ambitious ruler of a 15th century Italian city-state.
+        Rule well and you will be promoted to King or Queen - and win the game. Rule poorly,
+        and you will die less successful. This is a simulation game designed for competitive
+        casual gamers. It is run completely online using a combination of webpages and email
+        to display the user interface and notify players that it is their turn. It does not
+        require any third party plug-ins, flash, java or even javascript to play and requires
+        minimal information to register (basically you just need to choose a password).
+        SantaParavia.net allows up to six players to compete for the crown. The only way to sign
+        up for SantaParavia is to be invited by other players to play a game.<br><br>
+        <!-- <a href="register/index" style="font-weight: bold" class="myButton">Register</a> -->
+        <button type="button" onclick="window.location.href='register/index'" class="myButton">Register</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <a href="login/index" style="font-weight: bold" class="myButton">Login</a> -->
+        <button type="button" onclick="window.location.href='login/index'" class="myButton">Login</button>
+    </span>
+    </div>
+</div>
+
+{% endblock %}

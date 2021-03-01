@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+
+
+<div class="main2 container">
+    <br>
+    <p style="align-content: center;"><img src="../img/SantaParaviaBanner.png" alt="Santa Paravia and Fiumaccio" style="width: 743px;"></p>
+    <div class="row justify-content-md-center">
+        <div class="col-6 div-bg">
+            <h1 style='font-family: AquilineTwo, "Palatino Linotype";text-align: center;'>Sign Up</h1>
+            {% if user.errors is not empty %}
+            <p class="error" style="text-align: left;">Errors:</p>
+            <ul>
+                {% for error in user.errors %}
+                <li class="error">{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/register/create" method="post" id="formRegister">
+                <div class="mb-3">
+                    <label for="InputForName" class="form-label"><b>Display Name</b></label>
+                    <input type="text" name="name" class="form-control" id="InputForName" placeholder="Your display name" value="{{ user.name }}" autofocus required>
+                </div>
+                <div class="mb-3">
+                    <label for="InputForEmail" class="form-label"><b>Email address</b></label>
+                    <input type="email" name="email" class="form-control" id="InputForEmail" placeholder="Email address" value="{{ user.email }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="InputForPassword" class="form-label"><b>Password</b></label>
+                    <input type="password" name="password" class="form-control" id="InputForPassword" placeholder="Password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="InputForConfPassword" class="form-label"><b>Confirm Password</b></label>
+                    <input type="password" name="confirm_password" class="form-control" id="InputForConfPassword" placeholder="Confirm password" required>
+                </div>
+                <input type="submit" class="myButton" value="Register">&nbsp;&nbsp;
+                <button type="button" onclick="window.location.href='/login/index';" class="myButton">Log In</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block footer %}
+<script src="../js/hideShowPassword.min.js"></script>
+<script src="../js/app.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        /**
+         * Validate the form
+         */
+        $('#formRegister').validate({
+            rules: {
+                name: 'required',
+                email: {
+                    required: true,
+                    email: true,
+                    remote: '/account/validate-email'
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                    validPassword: true
+                }
+            },
+            messages: {
+                email: {
+                    remote: 'Email already taken'
+                }
+            }
+        });
+
+
+        /**
+         * Show password toggle button
+         */
+        $('#inputForPassword').hideShowPassword({
+            show: false,
+            innerToggle: 'focus'
+        });
+    });
+</script>
+
+{% endblock %}

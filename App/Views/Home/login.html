@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+<div class="main2 container">
+    <br>
+    <p style="align-content: center;"><img src="../img/SantaParaviaBanner.png" alt="Santa Paravia and Fiumaccio" style="width: 743px;"></p>
+    <div class="row justify-content-md-center">
+        <div class="col-6 div-bg">
+            <h1 style='font-family: AquilineTwo, "Palatino Linotype";text-align: center;'>Sign In</h1>
+            {% if badlogin is not empty %}
+            <p class="error">Invalid email or password!</p>
+            {% endif %}
+            <form action="/login/auth" method="post">
+                <div class="mb-3">
+                    <label for="InputForEmail" class="form-label"><b>Email address</b></label>
+                    <input type="email" name="email" class="form-control" id="InputForEmail" value="{% if email is empty %}{% else %}{{ email }}{% endif %}">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForPassword" class="form-label"><b>Password</b></label>
+                    <input type="password" name="password" class="form-control" id="InputForPassword">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="remember_me" {% if remember_me %} checked="checked"{% endif %} /> <b>Remember me</b>
+                    </label>
+                </div>
+                <br>
+                <input type="submit" class="myButton" value="Log In">&nbsp;&nbsp;
+                <button type="button" onclick="window.location.href='/login/forgotpwd';" class="myButton">Forgot Password</button>&nbsp;&nbsp;
+                <button type="button" onclick="window.location.href='/register/index';" class="myButton">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+{% endblock %}
