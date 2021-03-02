@@ -26,19 +26,19 @@ class Config
      * Database name
      * @var string
      */
-    const DB_NAME = 'paravia';
+    const DB_NAME = '';
 
     /**
      * Database user
      * @var string
      */
-    const DB_USER = 'paravia_dba';
+    const DB_USER = '';
 
     /**
      * Database password
      * @var string
      */
-    const DB_PASSWORD = '5@nt4_Par8v1a!';
+    const DB_PASSWORD = '';
 
     /**
      * Show or hide error messages on screen
@@ -50,19 +50,19 @@ class Config
      * Secret key for hashing
      * @var boolean
      */
-    const SECRET_KEY = 'Sup3rC@lifr6g1li$ticExpi4lid0tiOu5!';
+    const SECRET_KEY = 'ThisIsMySecretKey!';
 
     /**
      * Gmail Sender email address
      * @var string
      */
-    const EMAIL_ADDR = 'santa.paravia.and.fiumaccio@gmail.com';
+    const EMAIL_ADDR = '';
 
     /**
      * Gmail Sender password
      * @var string
      */
-    const EMAIL_PWD = '5@nt4_Par8v1a!';
+    const EMAIL_PWD = '';
 
     /**
      * Mailgun API key
